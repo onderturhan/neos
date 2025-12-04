@@ -11,18 +11,23 @@ import { CommonModule } from '@angular/common';
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 class="text-2xl font-bold text-white mb-4">Neos</h3>
+            <p class="text-gray-400 mb-4">
+              Hukuk dünyasındaki güncel gelişmeleri takip eden, güvenilir bir bilgi paylaşım platformu.
+            </p>
             <p class="text-gray-400">
-              Modern çözümlerle işinizi bir adım öne taşıyoruz.
+              Yasal düzenlemeler, mahkeme kararları ve hukuki analizler hakkında en güncel bilgilere ulaşın.
             </p>
           </div>
           <div>
             <h4 class="text-lg font-semibold text-white mb-4">Hızlı Linkler</h4>
             <ul class="space-y-2">
               <li><a href="#home" class="hover:text-white transition-colors">Ana Sayfa</a></li>
+              <li><a href="#features" class="hover:text-white transition-colors">Özellikler</a></li>
               <li><a href="#about" class="hover:text-white transition-colors">Hakkımızda</a></li>
-              <li><a href="#services" class="hover:text-white transition-colors">Hizmetler</a></li>
+              <li><a href="#categories" class="hover:text-white transition-colors">Kategoriler</a></li>
+              <li><a href="#portfolio" class="hover:text-white transition-colors">Portföy</a></li>
+              <li><a href="#articles" class="hover:text-white transition-colors">Makaleler</a></li>
               <li><a href="#references" class="hover:text-white transition-colors">Referanslar</a></li>
-              <li><a href="#media" class="hover:text-white transition-colors">Medya</a></li>
               <li><a href="#contact" class="hover:text-white transition-colors">İletişim</a></li>
             </ul>
           </div>

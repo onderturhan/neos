@@ -59,11 +59,13 @@ export class HeaderComponent {
 
   menuItems = [
     { id: 1, label: 'Ana Sayfa', href: '#home' },
-    { id: 2, label: 'Hakkımızda', href: '#about' },
-    { id: 3, label: 'Kategoriler', href: '#categories' },
-    { id: 4, label: 'Makaleler', href: '#articles' },
-    { id: 5, label: 'Referanslar', href: '#references' },
-    { id: 6, label: 'İletişim', href: '#contact' },
+    { id: 2, label: 'Özellikler', href: '#features' },
+    { id: 3, label: 'Hakkımızda', href: '#about' },
+    { id: 4, label: 'Kategoriler', href: '#categories' },
+    { id: 5, label: 'Portföy', href: '#portfolio' },
+    { id: 6, label: 'Makaleler', href: '#articles' },
+    { id: 7, label: 'Referanslar', href: '#references' },
+    { id: 8, label: 'İletişim', href: '#contact' },
   ];
 
   @HostListener('window:scroll', [])

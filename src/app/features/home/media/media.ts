@@ -7,34 +7,72 @@ import { SectionTitleComponent } from '../../../shared/components/section-title/
   standalone: true,
   imports: [CommonModule, SectionTitleComponent],
   template: `
-    <section id="media" class="py-20 bg-gray-50">
+    <section id="articles" class="py-20 bg-white">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <app-section-title 
-          title="Medya" 
-          subtitle="Projelerimizden ve etkinliklerimizden görüntüler">
+          title="Son Paylaşımlar" 
+          subtitle="Hukuk dünyasındaki en güncel gelişmeler ve analizler">
         </app-section-title>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           @for (item of mediaItems; track item.id) {
-            <div class="relative group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-              <div class="aspect-video bg-gradient-to-br from-blue-400 to-indigo-600 flex items-center justify-center">
-                <div class="text-6xl text-white opacity-80">
-                  {{ item.icon }}
+            <article class="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:border-blue-200">
+              <!-- Image/Icon Section -->
+              <div class="relative h-48 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 overflow-hidden">
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <div class="text-6xl transform group-hover:scale-110 transition-transform duration-500">
+                    {{ item.icon }}
+                  </div>
                 </div>
+                <div class="absolute top-4 right-4">
+                  <span class="px-3 py-1 bg-white/90 backdrop-blur-sm text-xs font-semibold text-blue-600 rounded-full">
+                    {{ item.category }}
+                  </span>
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
-              <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-opacity duration-300 flex items-center justify-center">
-                <div class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+              
+              <!-- Content Section -->
+              <div class="p-6">
+                <div class="flex items-center gap-2 text-sm text-gray-500 mb-3">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                   </svg>
+                  <span>{{ item.date }}</span>
+                  <span>•</span>
+                  <span>{{ item.readTime }} dk okuma</span>
                 </div>
+                
+                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300 line-clamp-2">
+                  {{ item.title }}
+                </h3>
+                
+                <p class="text-gray-600 mb-4 line-clamp-2 leading-relaxed">
+                  {{ item.description }}
+                </p>
+                
+                <a href="#" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors duration-300">
+                  Devamını Oku
+                  <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                  </svg>
+                </a>
               </div>
-              <div class="p-4 bg-white">
-                <h4 class="font-semibold text-gray-900">{{ item.title }}</h4>
-                <p class="text-sm text-gray-600 mt-1">{{ item.description }}</p>
-              </div>
-            </div>
+              
+              <!-- Hover Effect Border -->
+              <div class="absolute inset-0 border-2 border-blue-500 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+            </article>
           }
+        </div>
+        
+        <!-- View All Button -->
+        <div class="text-center mt-12">
+          <a href="#" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+            Tüm Makaleleri Görüntüle
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
         </div>
       </div>
     </section>
@@ -43,12 +81,60 @@ import { SectionTitleComponent } from '../../../shared/components/section-title/
 })
 export class MediaComponent {
   mediaItems = [
-    { id: 1, icon: '📸', title: 'Proje 1', description: 'Başarılı proje tanıtımı' },
-    { id: 2, icon: '🎥', title: 'Video 1', description: 'Etkinlik görüntüleri' },
-    { id: 3, icon: '📷', title: 'Proje 2', description: 'Müşteri testimonial' },
-    { id: 4, icon: '🎬', title: 'Video 2', description: 'Şirket tanıtım videosu' },
-    { id: 5, icon: '📹', title: 'Proje 3', description: 'Başarı hikayesi' },
-    { id: 6, icon: '🎞️', title: 'Video 3', description: 'Ürün tanıtımı' }
+    { 
+      id: 1, 
+      icon: '⚖️', 
+      title: 'Yeni Ticaret Kanunu Değişiklikleri ve Şirketler Hukuku', 
+      description: '2024 yılında yürürlüğe giren yeni düzenlemeler ve şirketler hukuku alanındaki önemli değişiklikler hakkında detaylı analiz.',
+      category: 'Ticaret Hukuku',
+      date: '15 Aralık 2024',
+      readTime: 8
+    },
+    { 
+      id: 2, 
+      icon: '👔', 
+      title: 'Uzaktan Çalışma Düzenlemeleri ve İşçi Hakları', 
+      description: 'Uzaktan çalışma modelinin hukuki boyutları, işçi hakları ve işveren yükümlülükleri konusunda güncel bilgiler.',
+      category: 'İş Hukuku',
+      date: '12 Aralık 2024',
+      readTime: 6
+    },
+    { 
+      id: 3, 
+      icon: '🏢', 
+      title: 'Gayrimenkul Alım-Satımında Dikkat Edilmesi Gerekenler', 
+      description: 'Tapu işlemleri, noter sözleşmeleri ve gayrimenkul alım-satım süreçlerinde bilinmesi gereken önemli noktalar.',
+      category: 'Gayrimenkul',
+      date: '10 Aralık 2024',
+      readTime: 5
+    },
+    { 
+      id: 4, 
+      icon: '🔒', 
+      title: 'Dijital Suçlar ve Siber Güvenlik Hukuku', 
+      description: 'Siber suçlar, veri koruma ve dijital güvenlik konularında ceza hukuku açısından önemli gelişmeler.',
+      category: 'Ceza Hukuku',
+      date: '8 Aralık 2024',
+      readTime: 7
+    },
+    { 
+      id: 5, 
+      icon: '👨‍👩‍👧‍👦', 
+      title: 'Boşanma Sürecinde Mal Paylaşımı ve Nafaka', 
+      description: 'Boşanma davalarında mal paylaşımı, nafaka hesaplama ve velayet konularında güncel yargıtay kararları.',
+      category: 'Aile Hukuku',
+      date: '5 Aralık 2024',
+      readTime: 9
+    },
+    { 
+      id: 6, 
+      icon: '📝', 
+      title: 'Yapay Zeka ve Fikri Mülkiyet Hakları', 
+      description: 'AI teknolojilerinin fikri mülkiyet hukuku açısından değerlendirilmesi ve telif hakları konusundaki yeni düzenlemeler.',
+      category: 'Fikri Mülkiyet',
+      date: '3 Aralık 2024',
+      readTime: 10
+    }
   ];
 }
 

@@ -58,12 +58,12 @@ export class HeaderComponent {
   mobileMenuOpen = signal(false);
 
   menuItems = [
-    { id: 1, label: 'Home', href: '#home' },
-    { id: 2, label: 'About', href: '#about' },
-    { id: 3, label: 'Services', href: '#services' },
-    { id: 4, label: 'References', href: '#references' },
-    { id: 5, label: 'Media', href: '#media' },
-    { id: 6, label: 'Contact', href: '#contact' },
+    { id: 1, label: 'Ana Sayfa', href: '#home' },
+    { id: 2, label: 'Hakkımızda', href: '#about' },
+    { id: 3, label: 'Kategoriler', href: '#categories' },
+    { id: 4, label: 'Makaleler', href: '#articles' },
+    { id: 5, label: 'Referanslar', href: '#references' },
+    { id: 6, label: 'İletişim', href: '#contact' },
   ];
 
   @HostListener('window:scroll', [])

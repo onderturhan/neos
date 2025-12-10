@@ -6,28 +6,24 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
+    <!-- Main Hero Section -->
     <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-20">
-      <!-- Animated Background -->
-      <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
-        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0YzAtMi4yMDktMS43OTEtNC00LTRzLTQgMS43OTEtNCA0IDEuNzkxIDQgNCA0IDQtMS43OTEgNC00eiIvPjwvZz48L2c+PC9zdmc+')] opacity-20"></div>
+      <!-- Business Background Image -->
+      <div class="absolute inset-0">
+        <!-- Main Background Image - Modern Office Building -->
+        <img 
+          src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
+          alt="Modern Ofis Binası"
+          class="w-full h-full object-cover">
+        <!-- Dark Overlay for better text readability -->
+        <div class="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-slate-800/70 to-slate-900/80"></div>
       </div>
-      
-      <!-- Floating Elements -->
-      <div class="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-      <div class="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
-      <div class="absolute -bottom-8 left-1/2 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
       
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
         <div class="text-center">
-          <div class="inline-block mb-6 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
-            <span class="text-white text-sm font-medium">📚 Hukuksal Bilgi Paylaşım Platformu</span>
-          </div>
           
           <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Hukuk Dünyasında
-            <span class="block mt-2 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Güncel Kalın
-            </span>
+            Neos Danışmanlık
           </h1>
           
           <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
@@ -37,9 +33,12 @@ import { CommonModule } from '@angular/common';
           <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a 
               href="#articles" 
-              class="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 transform hover:scale-105">
+              class="group relative px-8 py-4 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105"
+              style="background: linear-gradient(to right, #3d5a6e, #2d485c); box-shadow: 0 20px 25px -5px rgba(45, 72, 92, 0.3), 0 10px 10px -5px rgba(45, 72, 92, 0.2);"
+              onmouseover="this.style.boxShadow='0 20px 25px -5px rgba(45, 72, 92, 0.5), 0 10px 10px -5px rgba(45, 72, 92, 0.4)'"
+              onmouseout="this.style.boxShadow='0 20px 25px -5px rgba(45, 72, 92, 0.3), 0 10px 10px -5px rgba(45, 72, 92, 0.2)'">
               <span class="relative z-10">Son Paylaşımları İncele</span>
-              <div class="absolute inset-0 bg-gradient-to-r from-blue-700 to-purple-700 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div class="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" style="background: linear-gradient(to right, #2d485c, #1e3442);"></div>
             </a>
             <a 
               href="#categories" 
@@ -49,25 +48,6 @@ import { CommonModule } from '@angular/common';
           </div>
         </div>
         
-        <!-- Stats -->
-        <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
-          <div class="text-center">
-            <div class="text-4xl md:text-5xl font-bold text-white mb-2">500+</div>
-            <div class="text-gray-300">Hukuki Makale</div>
-          </div>
-          <div class="text-center">
-            <div class="text-4xl md:text-5xl font-bold text-white mb-2">50+</div>
-            <div class="text-gray-300">Kategori</div>
-          </div>
-          <div class="text-center">
-            <div class="text-4xl md:text-5xl font-bold text-white mb-2">10K+</div>
-            <div class="text-gray-300">Okuyucu</div>
-          </div>
-          <div class="text-center">
-            <div class="text-4xl md:text-5xl font-bold text-white mb-2">24/7</div>
-            <div class="text-gray-300">Güncel İçerik</div>
-          </div>
-        </div>
       </div>
     </section>
   `,

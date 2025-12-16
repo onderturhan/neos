@@ -10,7 +10,8 @@ import { CommonModule } from '@angular/common';
       [class]="'fixed top-0 left-0 right-0 z-50 transition-all duration-300 ' + (isScrolled() ? 'shadow-md' : 'bg-transparent')"
       [style.background]="isScrolled() ? '#2d485c' : 'transparent'">
       <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-center h-16 md:h-20 relative">
+        <div class="flex items-center justify-between h-16 md:h-20">
+          
           <div class="hidden md:flex md:space-x-8">
             @for (item of menuItems; track item.id) {
               <a 
@@ -22,7 +23,7 @@ import { CommonModule } from '@angular/common';
             }
           </div>
           <button 
-            class="md:hidden absolute right-0 p-2 rounded-md text-white"
+            class="md:hidden p-2 rounded-md text-white"
             (click)="toggleMobileMenu()">
             <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -52,13 +53,11 @@ export class HeaderComponent {
 
   menuItems = [
     { id: 1, label: 'Ana Sayfa', href: '#home' },
-    { id: 2, label: 'Özellikler', href: '#features' },
-    { id: 3, label: 'Hakkımızda', href: '#about' },
-    { id: 4, label: 'Kategoriler', href: '#categories' },
-    { id: 5, label: 'Portföy', href: '#portfolio' },
-    { id: 6, label: 'Makaleler', href: '#articles' },
-    { id: 7, label: 'Referanslar', href: '#references' },
-    { id: 8, label: 'İletişim', href: '#contact' },
+    { id: 2, label: 'Hakkımızda', href: '#about' },
+    { id: 3, label: 'Hizmet Alanlarımız', href: '#categories' },
+    { id: 4, label: 'Özellikler', href: '#features' },
+    { id: 5, label: 'Paylaşımlar', href: '#articles' },
+    { id: 6, label: 'İletişim', href: '#contact' },
   ];
 
   @HostListener('window:scroll', [])

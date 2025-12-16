@@ -22,13 +22,14 @@ import { CommonModule } from '@angular/common';
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
         <div class="text-center">
           
-          <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Neos Danışmanlık
-          </h1>
+          <div class="mb-6 flex justify-center">
+            <img 
+              src="/assets/neos_banner.png" 
+              alt="Neos Danışmanlık" 
+              class="h-16 md:h-24 lg:h-32 w-auto object-contain max-w-full"
+              style="opacity: 0.5;">
+          </div>
           
-          <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Yasal düzenlemeler, mahkeme kararları ve hukuki analizler hakkında en güncel bilgilere ulaşın.
-          </p>
           
           <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a 

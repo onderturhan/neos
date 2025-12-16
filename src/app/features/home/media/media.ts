@@ -7,10 +7,10 @@ import { SectionTitleComponent } from '../../../shared/components/section-title/
   standalone: true,
   imports: [CommonModule, SectionTitleComponent],
   template: `
-    <section id="articles" class="py-20 bg-white">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="articles" class="min-h-screen flex items-center bg-gradient-to-b from-gray-50 to-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20">
         <app-section-title 
-          title="Son Paylaşımlar" 
+          title="Paylaşımlar" 
           subtitle="Hukuk dünyasındaki en güncel gelişmeler ve analizler">
         </app-section-title>
         

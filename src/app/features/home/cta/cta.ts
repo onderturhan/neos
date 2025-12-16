@@ -17,9 +17,6 @@ import { CommonModule } from '@angular/common';
       <div class="absolute bottom-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
       
       <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
-        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
-          Hukuki Bilgiye Erişimde Yeni Dönem
-        </h2>
         <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
           Güncel hukuki gelişmelerden haberdar olmak için bize katılın. 
           Haftalık bültenimize abone olun ve önemli güncellemeleri kaçırmayın.

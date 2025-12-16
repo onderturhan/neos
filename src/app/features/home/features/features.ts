@@ -7,13 +7,13 @@ import { SectionTitleComponent } from '../../../shared/components/section-title/
   standalone: true,
   imports: [CommonModule, SectionTitleComponent],
   template: `
-    <section id="features" class="py-20 bg-white relative overflow-hidden">
+    <section id="features" class="min-h-screen flex items-center bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
       <!-- Background Pattern -->
       <div class="absolute inset-0 opacity-5">
         <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMwMDAiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0YzAtMi4yMDktMS43OTEtNC00LTRzLTQgMS43OTEtNCA0IDEuNzkxIDQgNCA0IDQtMS43OTEgNC00eiIvPjwvZz48L2c+PC9zdmc+')]"></div>
       </div>
 
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20">
         <app-section-title 
           title="Neden Bizi Seçmelisiniz?" 
           subtitle="Hukuki bilgiye erişimde fark yaratan özelliklerimiz">

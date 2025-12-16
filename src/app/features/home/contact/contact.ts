@@ -8,8 +8,8 @@ import { SectionTitleComponent } from '../../../shared/components/section-title/
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule, SectionTitleComponent],
   template: `
-    <section id="contact" class="py-20 bg-white">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" class="min-h-screen flex items-center bg-gradient-to-b from-gray-50 to-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20">
         <app-section-title 
           title="İletişim" 
           subtitle="Bizimle iletişime geçin, projeleriniz için en iyi çözümleri birlikte bulalım">

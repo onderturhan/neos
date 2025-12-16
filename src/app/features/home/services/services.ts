@@ -8,10 +8,10 @@ import { CardComponent } from '../../../shared/components/card/card';
   standalone: true,
   imports: [CommonModule, SectionTitleComponent, CardComponent],
   template: `
-    <section id="categories" class="py-20 bg-gradient-to-b from-white to-gray-50">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="categories" class="min-h-screen flex items-center bg-gradient-to-b from-gray-50 to-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20">
         <app-section-title 
-          title="Hukuk Kategorileri" 
+          title="Hizmet Alanlarımız" 
           subtitle="Geniş yelpazede hukuki konularda güncel içerikler ve analizler">
         </app-section-title>
         

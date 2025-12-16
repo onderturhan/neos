@@ -22,12 +22,10 @@ import { CommonModule } from '@angular/common';
             <h4 class="text-lg font-semibold text-white mb-4">Hızlı Linkler</h4>
             <ul class="space-y-2">
               <li><a href="#home" class="transition-colors hover:text-white" style="color: #cbd5e1;">Ana Sayfa</a></li>
-              <li><a href="#features" class="transition-colors hover:text-white" style="color: #cbd5e1;">Özellikler</a></li>
               <li><a href="#about" class="transition-colors hover:text-white" style="color: #cbd5e1;">Hakkımızda</a></li>
-              <li><a href="#categories" class="transition-colors hover:text-white" style="color: #cbd5e1;">Kategoriler</a></li>
-              <li><a href="#portfolio" class="transition-colors hover:text-white" style="color: #cbd5e1;">Portföy</a></li>
-              <li><a href="#articles" class="transition-colors hover:text-white" style="color: #cbd5e1;">Makaleler</a></li>
-              <li><a href="#references" class="transition-colors hover:text-white" style="color: #cbd5e1;">Referanslar</a></li>
+              <li><a href="#categories" class="transition-colors hover:text-white" style="color: #cbd5e1;">Hizmet Alanlarımız</a></li>
+              <li><a href="#features" class="transition-colors hover:text-white" style="color: #cbd5e1;">Özellikler</a></li>
+              <li><a href="#articles" class="transition-colors hover:text-white" style="color: #cbd5e1;">Paylaşımlar</a></li>
               <li><a href="#contact" class="transition-colors hover:text-white" style="color: #cbd5e1;">İletişim</a></li>
             </ul>
           </div>

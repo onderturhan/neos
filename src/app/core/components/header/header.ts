@@ -54,7 +54,7 @@ export class HeaderComponent {
     { id: 1, label: 'Ana Sayfa', href: '#home' },
     { id: 2, label: 'Hakkımızda', href: '#about' },
     { id: 3, label: 'Hizmet Alanlarımız', href: '#categories' },
-    { id: 4, label: 'Özellikler', href: '#features' },
+    { id: 4, label: 'Neden Neos', href: '#features' },
     { id: 5, label: 'Paylaşımlar', href: '#articles' },
     { id: 6, label: 'İletişim', href: '#contact' },
   ];

@@ -15,7 +15,7 @@ import { SectionTitleComponent } from '../../../shared/components/section-title/
 
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20">
         <app-section-title 
-          title="Neden Bizi Seçmelisiniz?" 
+          title="Neden Neos" 
           subtitle="Hukuki bilgiye erişimde fark yaratan özelliklerimiz">
         </app-section-title>
         

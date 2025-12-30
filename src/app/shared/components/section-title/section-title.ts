@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
         {{ title() }}
       </h2>
       @if (subtitle()) {
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        <p class="text-lg text-gray-600 max-w-4xl mx-auto">
           {{ subtitle() }}
         </p>
       }

@@ -10,7 +10,12 @@ import { CommonModule } from '@angular/common';
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 class="text-2xl font-bold text-white mb-4">Neos</h3>
+            <div class="mb-4">
+              <img 
+                src="/assets/neos_saydam.png" 
+                alt="Neos Danışmanlık" 
+                class="h-20 md:h-24 w-auto object-contain">
+            </div>
             <p class="mb-4" style="color: #cbd5e1;">
               Hukuk dünyasındaki güncel gelişmeleri takip eden, güvenilir bir bilgi paylaşım platformu.
             </p>

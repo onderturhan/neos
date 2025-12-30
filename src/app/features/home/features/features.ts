@@ -15,11 +15,10 @@ import { SectionTitleComponent } from '../../../shared/components/section-title/
 
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20">
         <app-section-title 
-          title="Neden Neos" 
-          subtitle="Hukuki bilgiye erişimde fark yaratan özelliklerimiz">
+          title="Neden Bizi Seçmelisiniz?">
         </app-section-title>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 max-w-4xl mx-auto">
           @for (feature of features; track feature.id) {
             <div class="group relative bg-white rounded-2xl p-8 border border-gray-200 hover:border-blue-300 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2">
               <!-- Icon -->
@@ -50,26 +49,14 @@ export class FeaturesComponent {
     {
       id: 1,
       title: 'Güncel İçerik',
-      description: 'Hukuk dünyasındaki en son gelişmeleri takip eden, sürekli güncellenen içerikler.',
+      description: 'Neos Danışmanlık, rakiplerinden öncelikle güncel mevzuatı yakından takip etme ve bu bilgiyi işverenler için pratik, uygulanabilir çözümlere dönüştürme yaklaşımıyla ayrışmaktadır. İş dünyasında mevzuat sürekli değişmekte ve bu değişiklikler çoğu zaman işletmeler için risk ve belirsizlik yaratmaktadır. Biz, yalnızca yasal uyumu sağlamakla kalmıyor, aynı zamanda işverenlerin karşılaşabileceği riskleri önceden öngörerek koruyucu bir danışmanlık sunuyoruz.',
       icon: '🔄'
-    },
-    {
-      id: 2,
-      title: 'Uzman Analizler',
-      description: 'Alanında uzman hukukçular tarafından hazırlanan detaylı ve güvenilir analizler.',
-      icon: '👨‍⚖️'
     },
     {
       id: 3,
       title: 'Kolay Erişim',
-      description: 'Karmaşık hukuki konuları herkesin anlayabileceği şekilde sunan, erişilebilir içerikler.',
+      description: 'Neos\'un farkı, teorik bilgiyle sınırlı kalmayan; sahadan gelen deneyim, güncel mevzuat takibi ve işveren odaklı bakış açısını birleştiren proaktif bir danışmanlık modeli sunmasıdır. Bu yaklaşım sayesinde müşterilerimiz yalnızca yasal zorunluluklarını yerine getirmekle kalmıyor, aynı zamanda maliyet avantajı elde ediyor, denetim süreçlerine karşı hazırlıklı hale geliyor ve uzun vadeli güvenli bir iş ortamı oluşturuyor.',
       icon: '📱'
-    },
-    {
-      id: 4,
-      title: 'Kapsamlı Kategori',
-      description: 'Geniş yelpazede hukuki konularda kapsamlı içerik arşivi ve detaylı kategoriler.',
-      icon: '📚'
     }
   ];
 }

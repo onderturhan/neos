@@ -11,8 +11,7 @@ import { SectionTitleComponent } from '../../../shared/components/section-title/
     <section id="contact" class="min-h-screen flex items-center bg-gradient-to-b from-gray-50 to-white">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20">
         <app-section-title 
-          title="İletişim" 
-          subtitle="Bizimle iletişime geçin, projeleriniz için en iyi çözümleri birlikte bulalım">
+          title="İletişim">
         </app-section-title>
         
         <div class="grid md:grid-cols-2 gap-12">
@@ -28,7 +27,7 @@ import { SectionTitleComponent } from '../../../shared/components/section-title/
                 </div>
                 <div class="ml-4">
                   <h4 class="text-lg font-semibold text-gray-900">Adres</h4>
-                  <p class="text-gray-600">Örnek Mahallesi, Örnek Sokak No: 123<br>İstanbul, Türkiye</p>
+                  <p class="text-gray-600">Adalet Mah. Manas Bulv. No:39 Folkart Towers B Kule K:32 D:3201<br>Bayraklı/İZMİR</p>
                 </div>
               </div>
               
@@ -40,7 +39,7 @@ import { SectionTitleComponent } from '../../../shared/components/section-title/
                 </div>
                 <div class="ml-4">
                   <h4 class="text-lg font-semibold text-gray-900">Telefon</h4>
-                  <p class="text-gray-600">+90 (212) 123 45 67</p>
+                  <a href="tel:+905544773434" class="text-gray-900 font-semibold hover:text-blue-600 transition-colors duration-200">+90 554 477 34 34</a>
                 </div>
               </div>
               
@@ -52,74 +51,74 @@ import { SectionTitleComponent } from '../../../shared/components/section-title/
                 </div>
                 <div class="ml-4">
                   <h4 class="text-lg font-semibold text-gray-900">E-posta</h4>
-                  <p class="text-gray-600">info@neos.com</p>
+                  <a href="mailto:info@neosdanismanlik.net" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">info@neosdanismanlik.net</a>
                 </div>
               </div>
             </div>
           </div>
           
-          <div>
-            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="space-y-6">
+          <div class="max-w-md">
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="space-y-4">
               <div>
-                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">
+                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">
                   Ad Soyad
                 </label>
                 <input 
                   type="text" 
                   id="name"
                   formControlName="name"
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
+                  class="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
                   [class.border-red-500]="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
                 @if (contactForm.get('name')?.invalid && contactForm.get('name')?.touched) {
-                  <p class="mt-1 text-sm text-red-600">Ad soyad gereklidir</p>
+                  <p class="mt-1 text-xs text-red-600">Ad soyad gereklidir</p>
                 }
               </div>
               
               <div>
-                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">
                   E-posta
                 </label>
                 <input 
                   type="email" 
                   id="email"
                   formControlName="email"
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
+                  class="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
                   [class.border-red-500]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
                 @if (contactForm.get('email')?.invalid && contactForm.get('email')?.touched) {
-                  <p class="mt-1 text-sm text-red-600">Geçerli bir e-posta adresi giriniz</p>
+                  <p class="mt-1 text-xs text-red-600">Geçerli bir e-posta adresi giriniz</p>
                 }
               </div>
               
               <div>
-                <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">
+                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">
                   Telefon
                 </label>
                 <input 
                   type="tel" 
                   id="phone"
                   formControlName="phone"
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition">
+                  class="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition">
               </div>
               
               <div>
-                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">
+                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">
                   Mesaj
                 </label>
                 <textarea 
                   id="message"
                   formControlName="message"
-                  rows="5"
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition resize-none"
+                  rows="4"
+                  class="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition resize-none"
                   [class.border-red-500]="contactForm.get('message')?.invalid && contactForm.get('message')?.touched"></textarea>
                 @if (contactForm.get('message')?.invalid && contactForm.get('message')?.touched) {
-                  <p class="mt-1 text-sm text-red-600">Mesaj gereklidir</p>
+                  <p class="mt-1 text-xs text-red-600">Mesaj gereklidir</p>
                 }
               </div>
               
               <button 
                 type="submit"
                 [disabled]="contactForm.invalid"
-                class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 disabled:bg-gray-400 disabled:cursor-not-allowed">
+                class="w-full bg-blue-600 text-white px-5 py-2.5 text-sm rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 disabled:bg-gray-400 disabled:cursor-not-allowed">
                 Gönder
               </button>
             </form>

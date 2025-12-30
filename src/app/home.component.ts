@@ -7,6 +7,7 @@ import { AboutComponent } from './features/home/about/about';
 import { ServicesComponent } from './features/home/services/services';
 import { MediaComponent } from './features/home/media/media';
 import { ContactComponent } from './features/home/contact/contact';
+import { ScrollToTopComponent } from './shared/components/scroll-to-top/scroll-to-top';
 
 @Component({
   selector: 'app-home',
@@ -19,7 +20,8 @@ import { ContactComponent } from './features/home/contact/contact';
     AboutComponent,
     ServicesComponent,
     MediaComponent,
-    ContactComponent
+    ContactComponent,
+    ScrollToTopComponent
   ],
   template: `
     <app-header></app-header>
@@ -32,6 +34,7 @@ import { ContactComponent } from './features/home/contact/contact';
       <app-contact></app-contact>
     </main>
     <app-footer></app-footer>
+    <app-scroll-to-top></app-scroll-to-top>
   `
 })
 export class HomeComponent {

@@ -24,12 +24,14 @@ import { CommonModule } from '@angular/common';
           
           <div class="mb-6 flex justify-center">
             <img 
-              src="/assets/neos_banner.png" 
+              src="/assets/neos_saydam.png" 
               alt="Neos Danışmanlık" 
-              class="h-16 md:h-24 lg:h-32 w-auto object-contain max-w-full"
-              style="opacity: 0.5;">
+              class="h-32 md:h-40 lg:h-48 w-auto object-contain max-w-full">
           </div>
           
+          <p class="text-xl md:text-2xl lg:text-3xl text-white font-light mb-8 max-w-3xl mx-auto leading-relaxed" style="font-family: 'Josefin Sans', sans-serif;">
+            Mevzuatın karmaşasını çözüme dönüştürüyoruz.
+          </p>
           
           <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a 

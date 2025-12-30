@@ -26,11 +26,13 @@ import { CommonModule } from '@angular/common';
             <img 
               src="/assets/neos_saydam.png" 
               alt="Neos Danışmanlık" 
-              class="h-32 md:h-40 lg:h-48 w-auto object-contain max-w-full">
+              class="h-40 md:h-52 lg:h-64 w-auto object-contain max-w-full">
           </div>
           
           <p class="text-xl md:text-2xl lg:text-3xl text-white font-light mb-8 max-w-3xl mx-auto leading-relaxed" style="font-family: 'Josefin Sans', sans-serif;">
+            <span class="text-3xl md:text-4xl lg:text-5xl text-white/80 mr-2">&ldquo;</span>
             Mevzuatın karmaşasını çözüme dönüştürüyoruz.
+            <span class="text-3xl md:text-4xl lg:text-5xl text-white/80 ml-2">&rdquo;</span>
           </p>
           
           <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">

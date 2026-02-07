@@ -21,13 +21,12 @@ import { CommonModule } from '@angular/common';
       
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
         <div class="text-center">
-          
-          <div class="mb-6 flex justify-center">
+          <h1 class="mb-6 flex justify-center">
             <img 
               src="/assets/neos_saydam.png" 
-              alt="Neos Danışmanlık" 
+              alt="Neos Danışmanlık - Sosyal Güvenlik ve İş Hukuku Danışmanlığı" 
               class="h-40 md:h-52 lg:h-64 w-auto object-contain max-w-full">
-          </div>
+          </h1>
           
           <p class="text-xl md:text-2xl lg:text-3xl text-white font-light mb-8 max-w-3xl mx-auto leading-relaxed" style="font-family: 'Josefin Sans', sans-serif;">
             <span class="text-3xl md:text-4xl lg:text-5xl text-white/80 mr-2">&ldquo;</span>

@@ -30,7 +30,8 @@
   <meta name="theme-color" content="#2d485c">
   <meta name="format-detection" content="telephone=no">
 
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" id="favicon">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BS70KXCWMN"></script>
   <script>
@@ -38,6 +39,24 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-BS70KXCWMN');
+  </script>
+  <!-- Dynamic favicon update for dark mode -->
+  <script>
+    (function() {
+      const favicon = document.getElementById('favicon');
+      const updateFavicon = function() {
+        const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        // Force browser to reload favicon by adding timestamp
+        favicon.href = 'favicon.svg?t=' + Date.now();
+      };
+      
+      // Check on load
+      updateFavicon();
+      
+      // Listen for changes
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      mediaQuery.addEventListener('change', updateFavicon);
+    })();
   </script>
 </head>
 <body>
